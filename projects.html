@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Vica Maltez</title>
+        <title class="notranslate" >Vica Maltez</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Custom Google font-->
@@ -17,16 +17,59 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
-    <body class="d-flex flex-column h-100">
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,pt,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">
+        function cookieExiste(nomeCookie) {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i].trim();
+                if (cookie.indexOf(nomeCookie + '=') === 0) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        function checkAndTranslate() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var langParam = urlParams.get('lang');
+
+            if (langParam == 'pt' || langParam == 'es' || langParam == 'en') {
+                // Traduzir para o português
+
+                // Obtém a data atual
+                var dataExpiracao = new Date();
+                dataExpiracao.setTime(dataExpiracao.getTime() + (60 * 24 * 60 * 60 * 1000));
+
+                // Define o novo cookie com o mesmo nome
+                document.cookie = "googtrans" + '=/en/' + langParam + ';expires=' + dataExpiracao.toUTCString() + ';path=/';
+                document.cookie = "porra" + '=/en/' + langParam + ';expires=' + dataExpiracao.toUTCString() + ';path=/';
+
+            }
+        }
+
+        // Chame a função para verificar e traduzir
+        checkAndTranslate();
+
+        // Chame a função de inicialização do Google Translate
+        googleTranslateElementInit();
+    </script>
+    <body class="d-flex flex-column h-100 bg-light">
         <main class="flex-shrink-0">
             <!-- Navigation-->
             <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white py-3">
                 <div class="container px-5">
                                 <img class="bg-gradient-primary-to-secondary rounded-circle mx-2" width="40" src="assets/profile.png" alt="..."/>
-                                <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Vica Maltez</span></a>
+                                <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary notranslate">Vica Maltez</span></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                            <li class="nav-item"><div class="nav-link"><div id="google_translate_element"></div></div></li>
                             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
                             <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
@@ -48,7 +91,7 @@
                                 <div class="card-body p-0">
                                     <div class="d-flex align-items-center">
                                         <div class="p-5 container">
-                                            <h2 class="fw-bolder">Cachoeira, meu amor</h2>
+                                            <h2 class="fw-bolder notranslate">Cachoeira, meu amor</h2>
                                             <p>Music video made in Cachoeira - BA with singer Raíssa Caldas in a tribute to the city.</p>
                                             <p>I worked as an art director.</p>
                                             <p>You can access the music video at this <a href="https://www.youtube.com/watch?v=lhMgwdn_4tU&ab_channel=RaissaCaldas" target="_blank">link</a>.</p>
@@ -62,7 +105,7 @@
                                 <div class="card-body p-0">
                                     <div class="d-flex align-items-center">
                                         <div class="p-5 container">
-                                            <h2 class="fw-bolder">SOBRE [VIVÊNCIA]</h2>
+                                            <h2 class="fw-bolder notranslate">SOBRE [VIVÊNCIA]</h2>
                                             <p>Short film made in the disciplines of Language and Cinematographic Expressions II, Production and Oriented Audiovisual Workshops I, at the Federal University of Recôncavo Da Bahia (UFRB).</p>
                                             <p>I worked as a director.</p>
                                             <p>You can access the film at this <a href="https://www.youtube.com/watch?v=Mi7dR0onlyw&ab_channel=CharlesMorais" target="_blank">link</a>.</p>
@@ -76,7 +119,7 @@
                                 <div class="card-body p-0">
                                     <div class="d-flex align-items-center">
                                         <div class="p-5 container">
-                                            <h2 class="fw-bolder">Tópicos sobre perdas - Doc</h2>
+                                            <h2 class="fw-bolder notranslate">Tópicos sobre perdas - Doc</h2>
                                             <p>Temporary losses, life-threatening losses and irretrievable losses: we all experience them throughout our lives, in various ways.</p>
                                             <p>Script, direction and editing: Vica Maltez</p>
                                         </div>
@@ -88,7 +131,7 @@
                             <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
                                 <div class="card-body p-0">
                                     <div class="d-flex align-items-center">
-                                        <div class="p-5 container">
+                                        <div class="p-5 container notranslate">
                                             <h2 class="fw-bolder">Dona Edésia - Doc</h2>
                                             <p>Dona Edésia was a country woman from the interior of Bahia, we know her as a sister, friend, daughter, wife, mother and grandmother, and in all her versions she was loved.</p>
                                             <p>Script, direction and editing: Vica Maltez</p>
@@ -101,7 +144,7 @@
                                 <div class="card-body p-0">
                                     <div class="d-flex align-items-center">
                                         <div class="p-5 container">
-                                            <h2 class="fw-bolder">Peter Pan: até quando ser criança?</h2>
+                                            <h2 class="fw-bolder notranslate">Peter Pan: até quando ser criança?</h2>
                                             <p>Video made for the subject Childhood, Adolescence and Citizenship, to talk about children growing up and the differences in childhood for each person.</p>
                                             <p>You can access the video essay at this <a href="https://drive.google.com/file/d/1ZXlYsDzMbITMX5QwXq66F1HT8KsOs9ci/view" target="_blank">link</a>.</p>
                                         </div>
@@ -113,7 +156,7 @@
                                 <div class="card-body p-0">
                                     <div class="d-flex align-items-center">
                                         <div class="p-5 container">
-                                            <h2 class="fw-bolder">Carrie a estranha - a representação feminina nos filmes de terror</h2>
+                                            <h2 class="fw-bolder notranslate">Carrie a estranha - a representação feminina nos filmes de terror</h2>
                                             <p>Video made for the course Audiovisual narratives: cinemas and feminisms, to talk about the distorted view of women in horror films, stemming from society's prejudices.</p>
                                             <p>You can access the video essay at this <a href="https://drive.google.com/file/d/1pWKy_3TkyLE-UJW3Z4FdqVI1aGKGfPo1/view" target="_blank">link</a>.</p>
                                         </div>
@@ -125,7 +168,7 @@
                                 <div class="card-body p-0">
                                     <div class="d-flex align-items-center">
                                         <div class="p-5 container">
-                                            <h2 class="fw-bolder">Vendem-se Memórias</h2>
+                                            <h2 class="fw-bolder notranslate">Vendem-se Memórias</h2>
                                             <p>Almost 30 years later, the family home is up for sale, and along with it, their memories.</p>
                                             <p>You can access the video essay at this <a href="https://drive.google.com/file/d/17LDcINamf4VRsGZStsNt_KBySuF028nJ/view" target="_blank">link</a>.</p>
                                         </div>
@@ -137,7 +180,7 @@
                                 <div class="card-body p-0">
                                     <div class="d-flex align-items-center">
                                         <div class="p-5 container">
-                                            <h2 class="fw-bolder">Music in Me</h2>
+                                            <h2 class="fw-bolder notranslate">Music in Me</h2>
                                             <p>How important music has always been in my life and how it has influenced me.</p>
                                             <p>You can access the video essay at this <a href="https://drive.google.com/file/d/1eaUzkihqec0uOnnK5O1rblnLQ0dD5Rf8/view" target="_blank">link</a>.</p>
                                         </div>
@@ -149,7 +192,7 @@
                                 <div class="card-body p-0">
                                     <div class="d-flex align-items-center">
                                         <div class="p-5 container">
-                                            <h2 class="fw-bolder">Debutante</h2>
+                                            <h2 class="fw-bolder notranslate">Debutante</h2>
                                             <p>10 years later, a new vision of my 15th birthday.</p>
                                             <p>You can access the video essay at this <a href="https://drive.google.com/file/d/1cFdiHNW_JVzCAGvZlDUIFJUdQ2m0oHVs/view" target="_blank">link</a>.</p>
                                         </div>

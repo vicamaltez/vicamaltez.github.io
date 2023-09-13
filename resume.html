@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Vica Maltez</title>
+        <title class="notranslate" >Vica Maltez</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Custom Google font-->
@@ -17,16 +17,59 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,pt,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">
+        function cookieExiste(nomeCookie) {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i].trim();
+                if (cookie.indexOf(nomeCookie + '=') === 0) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        function checkAndTranslate() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var langParam = urlParams.get('lang');
+
+            if (langParam == 'pt' || langParam == 'es' || langParam == 'en') {
+                // Traduzir para o português
+
+                // Obtém a data atual
+                var dataExpiracao = new Date();
+                dataExpiracao.setTime(dataExpiracao.getTime() + (60 * 24 * 60 * 60 * 1000));
+
+                // Define o novo cookie com o mesmo nome
+                document.cookie = "googtrans" + '=/en/' + langParam + ';expires=' + dataExpiracao.toUTCString() + ';path=/';
+                document.cookie = "porra" + '=/en/' + langParam + ';expires=' + dataExpiracao.toUTCString() + ';path=/';
+
+            }
+        }
+
+        // Chame a função para verificar e traduzir
+        checkAndTranslate();
+
+        // Chame a função de inicialização do Google Translate
+        googleTranslateElementInit();
+    </script>
     <body class="d-flex flex-column h-100 bg-light">
         <main class="flex-shrink-0">
             <!-- Navigation-->
             <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white py-3">
                 <div class="container px-5">
-                    <img class="bg-gradient-primary-to-secondary rounded-circle mx-2" width="40" src="assets/profile.png" alt="..."/>
-                    <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Vica Maltez</span></a>
+                                <img class="bg-gradient-primary-to-secondary rounded-circle mx-2" width="40" src="assets/profile.png" alt="..."/>
+                                <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary notranslate">Vica Maltez</span></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                            <li class="nav-item"><div class="nav-link"><div id="google_translate_element"></div></div></li>
                             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
                             <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
@@ -48,10 +91,16 @@
                                 <h2 class="text-primary fw-bolder mb-0">Experience</h2>
                                 <!-- Download resume button-->
                                 <!-- Note: Set the link href target to a PDF file within your project-->
-                                <a class="btn btn-primary px-4 py-3 mx-2" href="#!">
-                                    <div class="d-inline-block bi bi-download me-2"></div>
-                                    Download Resume
-                                </a>
+                                <div class="d-flex flex-sm-row flex-column btn-group btn-group-sm mx-2">
+                                    <a class="btn btn-outline-primary py-3" href="pdf/cv1.pdf" target="_blank">
+                                        <div class="d-inline-block bi bi-download me-2"></div>
+                                        Download Resume<text class="notranslate"> (en)</text>
+                                    </a>
+                                    <a class="btn btn-outline-primary py-3 " href="pdf/cv2.pdf" target="_blank">
+                                        <div class="d-inline-block bi bi-download me-2"></div>
+                                        Download Resume (pt-br)
+                                    </a>
+                                </div>
                             </div>
                             <!-- Experience Card 1-->
                             <div class="card shadow border-0 rounded-4 mb-5">

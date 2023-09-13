@@ -11732,3 +11732,47 @@ html {
     left: -2vw;
   }
 }
+
+.custom-iframe {
+  min-width: 100px; /* Defina o tamanho mínimo desejado em pixels */
+  min-height: 350px; /* Defina o tamanho mínimo desejado em pixels */
+  width: 80%; /* Para garantir que ele ocupe a largura total do container */
+}
+
+.goog-te-banner-frame{
+  display:none !important;
+  visibility: hidden;
+  }
+
+.goog-te-gadget-simple{
+    background-color:transparent;
+    border:2px solid #eee;
+    border-radius:5px;
+    padding:5px 10px;
+    box-shadow:0 2px 10px -7pxrgba(0,0,0,0.2);
+    font-size:0px;
+}
+#goog-gt-tt, .goog-te-balloon-frame{display: none !important;}
+.goog-text-highlight { background: none !important; box-shadow: none !important;}
+#goog-gt-tt, .goog-te-balloon-frame
+{
+display: none !important;
+}
+.goog-text-highlight 
+{ 
+background: none !important;
+box-shadow: none !important;
+}
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+} 
+
+body {
+  top: 0px !important;
+ }
+
+ body > .skiptranslate > iframe.skiptranslate {
+  display: none !important;
+  visibility: hidden !important;
+ }
