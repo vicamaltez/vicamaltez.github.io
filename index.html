@@ -70,9 +70,9 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
                             <li class="nav-item"><div class="nav-link"><div id="google_translate_element"></div></div></li>
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-                            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                            <li class="nav-item"><a class="nav-link notranslate" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="resume.html">Curriculum</a></li>
+                            <li class="nav-item"><a class="nav-link" href="projects.html">Portfolio</a></li>
                             <li class="nav-item"><a class="nav-link" href="contact.html">Contact me</a></li>
                         </ul>
                     </div>
@@ -81,7 +81,7 @@
             <!-- Header-->
             <header class="bg-light py-5">
                 <div class="container px-5">
-                    <div class="col-xxl-7">
+                    <div class="py-5">
                         <!-- Header profile picture-->
                         <div class="d-flex justify-content-center mt-5 mt-xxl-0">
                             <div class="">
@@ -92,15 +92,15 @@
                         </div>
                     </div>
                     <div class="row gx-5 align-items-center">
-                        <div class="col-xxl-5">
+                        <div class="">
                             <!-- Header text content-->
-                            <div class="text-center text-xxl-start">
+                            <div class="text-center ">
                                 <div class="display-3 fw-bolder mb-3 text-gradient notranslate">Vica Maltez</div>
                                 <div class="badge bg-gradient-primary-to-secondary text-white mb-4"><div class="text-uppercase">Writer &middot; Director &middot; Screenwriter &middot; Art director</div></div>
                                 <!-- <h1 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline">Get online and grow fast</span></h1> -->
-                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
-                                    <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="resume.html">Resume</a>
-                                    <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="projects.html">Projects</a>
+                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center mb-3">
+                                    <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="resume.html">Curriculum</a>
+                                    <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="projects.html">Portfolio</a>
                                 </div>
                             </div>
                         </div>
@@ -111,7 +111,7 @@
             <section class="bg-light">
                 <div class="container px-5">
                     <div class="row gx-5 justify-content-center">
-                        <div class="col-xxl-1">
+                        <div class="">
                             <div class="text-center my-2">
                                 <!-- <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">About Me</span></h2> -->
                                 <p class="lead fw-light mb-4">My name is <text class="text-gradient">Vitória Carvalho Maltez</text> and I can help your ideas become real!</p>
@@ -139,5 +139,48 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+
+        <!-- <script>
+            function getCookieValue(cookieName) {
+                var name = cookieName + "=";
+                var decodedCookie = decodeURIComponent(document.cookie);
+                var cookieArray = decodedCookie.split(';');
+                
+                for(var i = 0; i < cookieArray.length; i++) {
+                    var cookie = cookieArray[i].trim();
+                    if (cookie.indexOf(name) == 0) {
+                    return cookie.substring(name.length, cookie.length);
+                    }
+                }
+                return "";
+            }
+
+            function mp_t(){
+                if (getCookieValue('googtrans') === '/en/pt') {
+                    var elementosResumo = document.getElementsByClassName('t-resume');
+
+        // Itera sobre os elementos e define o conteúdo de texto para 'Currículo'
+                    for (var i = 0; i < elementosResumo.length; i++) {
+                        elementosResumo[i].innerHTML = 'Currículo';
+                    }
+                }
+
+                if (getCookieValue('googtrans') === '/en/es') {
+                    var elementosResumo = document.getElementsByClassName('t-resume');
+                }
+
+
+        // Itera sobre os elementos e define o conteúdo de texto para 'Currículo'
+                    for (var i = 0; i < elementosResumo.length; i++) {
+                        elementosResumo[i].innerHTML = 'Currículum';
+                    }
+            }
+            var botaoTraducao = document.getElementById('google_translate_element');
+
+            // Adiciona o segundo onclick (ou você pode chamar essa linha em resposta a algum evento)
+            botaoTraducao.addEventListener('click', mp_t);
+
+            mp_t()
+        </script> -->
     </body>
 </html>
